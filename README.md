@@ -6,8 +6,8 @@ Dalam repository ini terdapat 2 folder utama, pertama index yang berisi dengan w
 
 Folder index:
 •	Index.php : Web utama
-•	about.html : web yang diakses melalui index
-•	green-world.html : web yang diakses melalui index
+•	about.html : web yang diakses melalui index (tekan logo untuk balik ke index)
+•	green-world.html : web yang diakses melalui index (tekan logo untuk balik ke index)
 •	inquiry.php : perintah php yang menginput data form kedalam database
 •	style.css : style yang dipakai untuk web
 •	script.js : javascript yang dipakai untuk web (submit form, animasi, dll) 
