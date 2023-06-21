@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+    scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    transition: none;
+}
+
+body {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(63.18deg, #70DD08 0%, #008000 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    min-height: 100vh;
+    overflow: auto;
+}
+
+
+.container {
+    padding: 50px 100px;
+    height: auto;
+}
+
+h1 {
+    color: #fff;
+    font-size: 54px;
+    margin-bottom: 50px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 8px;
+    border-collapse: collapse;
+    overflow: hidden; /* Hide the border overflow */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #362F4A;
+    color: #fff;
+}
+
+td {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    word-wrap: break-word; /* Wrap long text within cells */
+    max-width: 200px; /* Adjust the max-width as per your needs */
+}
+
+tr:nth-child(even) {
+    background-color: #fff; /* Alternate background color for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #F4F4F2; /* Alternate background color for odd rows */
+}
