@@ -25,21 +25,19 @@ body {
     text-align: center;
     justify-content: center;
     background: linear-gradient(63.18deg, #70DD08 0%, #008000 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     min-height: 100vh;
     overflow: auto;
 }
 
-
 .container {
-    padding: 50px 100px;
+    padding: 20px;
     height: auto;
 }
 
 h1 {
     color: #fff;
-    font-size: 54px;
-    margin-bottom: 50px;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 table {
@@ -47,10 +45,12 @@ table {
     border: 1px solid;
     border-radius: 8px;
     border-collapse: collapse;
-    overflow: hidden; /* Hide the border overflow */
+    overflow: hidden;
+    /* Hide the border overflow */
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: center;
 }
@@ -64,14 +64,91 @@ td {
     padding: 10px 20px;
     box-sizing: border-box;
     text-align: center;
-    word-wrap: break-word; /* Wrap long text within cells */
-    max-width: 200px; /* Adjust the max-width as per your needs */
+    word-wrap: break-word;
+    /* Wrap long text within cells */
+    max-width: 200px;
+    /* Adjust the max-width as per your needs */
 }
 
 tr:nth-child(even) {
-    background-color: #fff; /* Alternate background color for even rows */
+    background-color: #fff;
 }
 
 tr:nth-child(odd) {
-    background-color: #F4F4F2; /* Alternate background color for odd rows */
+    background-color: #F4F4F2;
+}
+
+/* Media queries for responsive adjustments */
+
+@media (max-width: 768px) {
+    
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    td,
+    th {
+        padding: 8px;
+    }
+
+    /* Add ellipsis for the email column */
+    .email-column,
+    .date-column {
+        max-width: 200px;
+        /* Adjust the max-width as per your needs */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 560px) {
+
+    h1 {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    td,
+    th {
+        padding: 7px;
+    }
+
+    /* Add ellipsis for the email column */
+    .email-column,
+    .date-column {
+        max-width: 90px;
+        /* Adjust the max-width as per your needs */
+    }
+}
+
+@media (max-width: 200px) {
+
+    h1 {
+        font-size: 16px;
+    }
+
+    table {
+        font-size: 10px;
+    }
+
+    td,
+    th {
+        padding: 4px;
+    }
+
+    /* Add ellipsis for the email column */
+    .email-column,
+    .date-column {
+        max-width: 60px;
+        /* Adjust the max-width as per your needs */
+    }
 }

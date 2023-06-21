@@ -152,7 +152,7 @@ img {
     font-size: 18px;
 }
 
-#about{
+#about {
     padding: 60px 10%;
     text-align: left;
 }
@@ -171,16 +171,6 @@ img {
 #about p,
 #green-world p {
     font-size: 16px;
-}
-
-.quote {
-    text-align: center;
-    padding: 50px 10%;
-    font-size: 18px;
-}
-
-.quote cite {
-    color: #00b000;
 }
 
 /* PRODUCTS */
@@ -240,6 +230,7 @@ img {
 #content .container {
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .image-container {
@@ -530,10 +521,20 @@ footer p {
 }
 
 /* Phone mode */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1280px) {
 
-    p,
-    blockquote {
+    .image-container img {
+        width: 600px;
+    }
+
+    .text-container {
+        padding: 21px;
+    }
+}
+
+@media screen and (max-width: 916px) {
+
+    p {
         font-size: 14px;
     }
 
@@ -646,11 +647,119 @@ footer p {
 
 @media screen and (max-width: 769px) {
 
+    p {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    header .logo {
+        margin-bottom: 20px;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 24px;
+    }
+
+    .banner-content p {
+        font-size: 14px;
+    }
+
+    #about,
+    #green-world {
+        padding: 15px;
+    }
+
+    #about h2,
+    #green-world h2 {
+        font-size: 26px;
+    }
+
+    #about p,
+    #green-world p {
+        font-size: 14px;
+    }
+
+    #category,
+    #product-carousel {
+        text-align: center;
+    }
+
+    #category h2 {
+        padding: 0;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
+        gap: 10px;
+    }
+
+    .product {
+        padding: 0;
+    }
+
+    .product p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .production-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form button,
+    form input,
+    form textarea {
+        font-size: 12px;
+    }
+
+    #contact {
+        padding: 50px 20px;
+    }
+
+    #content .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .image-container {
+        flex: 100%;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+
+    .text-container {
+        position: relative;
+        padding: 20px;
+    }
+
+    footer p {
+        line-height: 1;
+        font-size: 12px;
+    }
+
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
     .btn {
         width: 150px;
     }
-
 }
+
 
 @media screen and (max-width: 600px) {
     .wrapper .carousel {

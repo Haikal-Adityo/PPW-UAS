@@ -40,11 +40,11 @@
 
             echo "<table>
                     <tr>
-                        <th>Inquiry ID</th>
+                        <th>ID</th>
                         <th>Name</th>
-                        <th>Email</th>
+                        <th class='email-column'>Email</th>
                         <th>Message</th>
-                        <th>Date</th>
+                        <th class='date-colum'>Date</th>
                     </tr>";
 
             while (mysqli_stmt_fetch($stmt)) {
@@ -52,13 +52,14 @@
                     <tr>
                         <td>{$inquiry_id}</td>
                         <td>{$name}</td>
-                        <td>{$email}</td>
+                        <td class='email-column'>{$email}</td>
                         <td>{$message}</td>
-                        <td>{$date}</td>
+                        <td class='date-colum'>{$date}</td>
                     </tr>
                 ";
             }
             echo "</table>";
+
 
             // Close the connection
             mysqli_stmt_close($stmt);
