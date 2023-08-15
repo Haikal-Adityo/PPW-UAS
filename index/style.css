@@ -42,6 +42,7 @@ header {
     padding: 10px 10%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 200;
+    position: -webkit-sticky;
     position: sticky;
     transition: 0.5s ease;
     -webkit-backdrop-filter: blur(3px);
@@ -271,6 +272,26 @@ form textarea {
     resize: none;
 }
 
+form input::-webkit-input-placeholder,
+form textarea::-webkit-input-placeholder {
+    color: #000 !important;
+}
+
+form input::-moz-placeholder,
+form textarea::-moz-placeholder {
+    color: #000 !important;
+}
+
+form input:-ms-input-placeholder,
+form textarea:-ms-input-placeholder {
+    color: #000 !important;
+}
+
+form input::-ms-input-placeholder,
+form textarea::-ms-input-placeholder {
+    color: #000 !important;
+}
+
 form input::placeholder,
 form textarea::placeholder {
     color: #000 !important;
@@ -378,13 +399,27 @@ footer p {
 
 /* Animation for thank you message */
 .animate {
+    -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     opacity: 0;
 }
 
 .stay {
+    -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     opacity: 1;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeIn {
@@ -453,6 +488,7 @@ footer p {
     grid-auto-flow: column;
     grid-auto-columns: calc(100% / 3);
     overflow-x: auto;
+    -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -467,12 +503,17 @@ footer p {
 }
 
 .carousel.dragging {
+    -ms-scroll-snap-type: none;
     scroll-snap-type: none;
     scroll-behavior: auto;
 }
 
 .carousel.dragging .card {
+    cursor: -webkit-grab;
     cursor: grab;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
@@ -506,6 +547,8 @@ footer p {
 .card .img img {
     width: 300px;
     height: auto;
+
+    -o-object-fit: cover;
 
     object-fit: cover;
 }
